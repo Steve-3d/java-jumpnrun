@@ -1,0 +1,46 @@
+# 
+# Menüeinträge folgen dem folgenden Aufbau: 
+#
+#    menu_<ID>_<INDEX> = [[<KOMMANDO>|<ZIEL-ID>],<TEXT>]
+#
+# <ID>        Die ID des Menüs. 0=Hauptmenü
+# <INDEX>     Der Index des Menüeintrags (ab 0 aufsteigend)
+# <KOMMANDO>  Ein Wort das als Event an die Anwendung übergeben wird
+#             Mögliche weitere Einstellungen anstelle eines Kommandos sind:
+#                CHECKBOX(<PROP>)
+#                RADIOBUTTON(<PROP>=<VALUE>)
+#                RANGE(<PROP>,<VON>,<BIS>)
+# <ZIEL-ID>   Die ID des Menüs in das bei Auswahl gesprungen werden soll
+# <TEXT>      Der Text der als Menüeintrag angezeigt werden soll
+# <PROP>      Name des Keys in der Property-Map der herangezogen 
+#             werden soll
+# <VALUE>     Wert der gesetzt werden soll / bei dem der Eintrag
+#             markiert sein soll
+#
+# Der Titel eines Menüs wird folgendermassen angegeben:
+#
+#    menu_<ID> = <TITEL>
+#
+# <ID>        Die ID des Menüs. 0=Hauptmenü
+# <TITEL>     Der Titeltext des Menüs
+#
+# Falls nach dem "=" nur ein "-" kommt wird eine Leerzeile ausgegeben
+#
+# Das Hauptmenü
+# -------------------------------------------------------------------
+
+caption = PAUSE
+
+menu_0   = Pause
+menu_0_0 = 1,Einstellungen...
+
+# Einstellungen
+# -------------------------------------------------------------------
+
+menu_1   = Einstellungen
+menu_1_0 = CHECKBOX(showFps),FPS anzeigen
+menu_1_1 = RANGE(fpsTransparency/0/100),FPS Transparenz
+menu_1_2 = -
+menu_1_3 = 0,Zurueck
+
+

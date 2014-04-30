@@ -1,0 +1,24 @@
+# Größe der Sprites
+width=22
+height=24
+
+# Bildatei mit den Bilddaten
+image=enemy1.png
+
+# Bereich der für die Kollisonserkennung benutzt wird
+# x,y,w,h
+# (0,0) ist die linke untere Ecke!
+hitbox=4,4,16,16
+
+# Definition der Animationen
+# Die Angaben sind jeweils (Zeile, Spalte, FrameDauer) - mit 0 als erste Spalte bzw. Zeile
+# Die FrameDauer wird in Millisekunden angegeben - wenn sie fehlt wird ein Defaultwert angenommen
+
+walk_left=(0,0,100)/(0,1,100)/(0,2,100)/(0,3,100)/(0,4,100)/(0,5,100)
+
+walk_right=(1,5,100)/(1,4,100)/(1,3,100)/(1,2,100)/(1,1,100)/(1,0,100)
+
+idle_right=(1,2)
+
+idle_left=(0,2)
+
